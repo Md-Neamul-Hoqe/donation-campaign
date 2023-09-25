@@ -17,7 +17,7 @@ const NavBar = () => {
   );
 
   return (
-    <div className="max-w-screen-lg mx-auto relative">
+    <div>
       <div className="navbar absolute top-0 py-10 z-20">
         <div className="navbar-start">
           <div className="dropdown">
@@ -42,7 +42,7 @@ const NavBar = () => {
               {navLinks}
             </ul>
           </div>
-          <a href="/" className="h-16">
+          <a href="/" className="max-sm:h-16 max-sm:w-full">
             <img src={logo} alt="donation-campaign logo" />
           </a>
         </div>

@@ -54,11 +54,11 @@ const DetailsPage = () => {
   };
 
   return (
-    <section className="py-40 mx-auto">
-      <div className="card max-w-screen-lg mx-auto rounded-none">
+    <section className="py-32 md:py-40">
+      <div className="card max-md:px-5 max-w-screen-xl 2xl:max-w-screen-2xl mx-auto rounded-none">
         <figure className="relative rounded-lg">
           <img className="w-full" src={picture} alt={title} />
-          <div className="card-actions bg-black/20 py-5 px-10 w-full absolute left-0 bottom-0">
+          <div className="card-actions bg-black/20 max-sm:p-2 py-5 px-10 w-full absolute left-0 bottom-0">
             <button
               onClick={() => {
                 {
@@ -66,7 +66,7 @@ const DetailsPage = () => {
                   greetings();
                 }
               }}
-              className={`btn border-0 capitalize font-semibold text-xl rounded drawer-overlay bg-[${text_button_bg_color}] text-white`}>
+              className={`btn btn-md max-sm:btn-xs max-sm:text-xs border-0 capitalize font-semibold text-xl rounded drawer-overlay bg-[${text_button_bg_color}] text-white`}>
               Donate ${price}
             </button>
           </div>
@@ -76,7 +76,8 @@ const DetailsPage = () => {
           <p>{description}</p>
         </div>
       </div>
-      <ToastContainer></ToastContainer>
+      <ToastContainer
+        className={`max-md:max-w-[300px] max-md:ms-auto space-y-3 max-md:py-10`}></ToastContainer>
     </section>
   );
 };

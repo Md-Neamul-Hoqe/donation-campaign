@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <section className="min-h-screen">
       <HomeBanner></HomeBanner>
-      <section className="max-w-screen-lg mx-auto">
+      <section className="max-w-screen-xl 2xl:max-w-screen-2xl mx-auto">
         <HomeCards cardsData={cardsData}></HomeCards>
       </section>
     </section>
