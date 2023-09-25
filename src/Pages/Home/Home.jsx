@@ -4,7 +4,7 @@ import HomeCards from "../../components/HomeCards/HomeCards";
 
 const Home = () => {
   const cardsData = useLoaderData();
-  console.log(cardsData);
+  // console.log(cardsData);
   return (
     <section className="min-h-screen">
       <HomeBanner></HomeBanner>

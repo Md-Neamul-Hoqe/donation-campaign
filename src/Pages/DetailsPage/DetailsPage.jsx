@@ -4,10 +4,22 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const DetailsPage = () => {
-  const [donations, setDonations] = useState([]);
-  const cards = useLoaderData();
+  /* Initially let the LS empty [] */
+  const [LSDonations, setLSDonations] = useState([]);
+
+  /* load the data from loader hook */
+  const listOfAllDonations = useLoaderData();
+
+  /* get the id from the parameter passes by the url */
   const { id: currentId } = useParams();
-  const [details] = cards.filter((card) => card.id == currentId);
+
+  console.log(currentId);
+
+  /* find the donation details from the list of donation */
+  const [details] = listOfAllDonations.filter(
+    (eachDonation) => eachDonation.id == currentId
+  );
+
   const {
     picture,
     title,
@@ -22,12 +34,14 @@ const DetailsPage = () => {
     toast("Thank you for your selfless service through your donation.");
 
   const handleDonationList = (donation) => {
+    /* load the donation list */
     const donationsStored = localStorage.getItem("donations");
-    // console.log(donationsStored);
 
     /* if exists previous donation list */
     if (donationsStored) {
       const preDonations = JSON.parse(donationsStored);
+
+      /* find the donation in the list */
       const isExists = preDonations.find(
         (preDonation) => preDonation.id == donation.id
       );
@@ -37,20 +51,21 @@ const DetailsPage = () => {
         const donations = [...preDonations, donation];
 
         /* set to state */
-        setDonations(donations);
+        setLSDonations(donations);
 
         /* set to local storage / database */
         return localStorage.setItem("donations", JSON.stringify(donations));
       } else {
+        /* toast for donation again */
         return toast("Thanks To Donate Again.");
       }
     }
 
     /* If doesn't exist any list */
-    setDonations([donation]);
+    setLSDonations([donation]);
 
     /* set to local storage / database */
-    localStorage.setItem("donations", JSON.stringify(donations));
+    return localStorage.setItem("donations", JSON.stringify([donation]));
   };
 
   return (
@@ -63,7 +78,9 @@ const DetailsPage = () => {
               onClick={() => {
                 {
                   handleDonationList(details);
-                  greetings();
+
+                  /* to prevent greeting without adding the donation to the LS */
+                  LSDonations?.length && greetings();
                 }
               }}
               className={`btn btn-md max-sm:btn-xs max-sm:text-xs border-0 capitalize font-semibold text-xl rounded drawer-overlay bg-[${text_button_bg_color}] text-white`}>
