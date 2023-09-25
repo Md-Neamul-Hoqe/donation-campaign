@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "picture": "https://i.ibb.co/nsVyXqr/Clean-Water-Initiative.jpg",
+    "title": "Clean Water Initiative",
+    "category": "Water",
+    "category_bg_color": "#3498db",
+    "card_bg_color": "#ecf0f1",
+    "text_button_bg_color": "#2ecc71",
+    "description": "Help provide clean and safe drinking water to communities in need.",
+    "price": 20.0
+  },
+  {
+    "id": 2,
+    "picture": "https://i.ibb.co/cJtY96f/Education-for-All.webp",
+    "title": "Education for All",
+    "category": "Education",
+    "category_bg_color": "#e74c3c",
+    "card_bg_color": "#f5b041",
+    "text_button_bg_color": "#9b59b6",
+    "description": "Support educational programs to ensure access to quality education for everyone.",
+    "price": 25.0
+  },
+  {
+    "id": 3,
+    "picture": "https://i.ibb.co/ZfDHdwk/Hunger-Relief.jpg",
+    "title": "Hunger Relief",
+    "category": "Food",
+    "category_bg_color": "#f39c12",
+    "card_bg_color": "#d5dbdb",
+    "text_button_bg_color": "#e67e22",
+    "description": "Join us in the fight against hunger and food insecurity around the world.",
+    "price": 15.0
+  },
+  {
+    "id": 4,
+    "picture": "https://i.ibb.co/XxgFJZ6/Medical-Care-for-Children.jpg",
+    "title": "Medical Care for Children",
+    "category": "Health",
+    "category_bg_color": "#27ae60",
+    "card_bg_color": "#ffffff",
+    "text_button_bg_color": "#2980b9",
+    "description": "Provide medical care and support to children in underserved areas.",
+    "price": 30.0
+  },
+  {
+    "id": 5,
+    "picture": "https://i.ibb.co/QjJzKDr/Animal-Welfare.jpg",
+    "title": "Animal Welfare",
+    "category": "Animals",
+    "category_bg_color": "#d35400",
+    "card_bg_color": "#f0e68c",
+    "text_button_bg_color": "#c0392b",
+    "description": "Help protect and care for animals in need, from pets to wildlife.",
+    "price": 18.0
+  },
+  {
+    "id": 6,
+    "picture": "https://i.ibb.co/VjF43mc/Environmental-Conservation.jpg",
+    "title": "Environmental Conservation",
+    "category": "Environment",
+    "category_bg_color": "#16a085",
+    "card_bg_color": "#ecf0f1",
+    "text_button_bg_color": "#1abc9c",
+    "description": "Support initiatives that work to preserve our planet's natural beauty.",
+    "price": 22.0
+  },
+  {
+    "id": 7,
+    "picture": "https://i.ibb.co/qrSscSB/Clean-Energy-for-All.jpgg",
+    "title": "Clean Energy for All",
+    "category": "Environment",
+    "category_bg_color": "#16a085",
+    "card_bg_color": "#ecf0f1",
+    "text_button_bg_color": "#1abc9c",
+    "description": "Support the transition to clean and sustainable energy sources worldwide.",
+    "price": 23.0
+  },
+  {
+    "id": 8,
+    "picture": "https://i.ibb.co/Lv6NRGC/Disaster-Relief.jpg",
+    "title": "Disaster Relief",
+    "category": "Emergency Aid",
+    "category_bg_color": "#e74c3c",
+    "card_bg_color": "#f5b041",
+    "text_button_bg_color": "#9b59b6",
+    "description": "Provide immediate assistance to communities affected by natural disasters.",
+    "price": 35.0
+  },
+  {
+    "id": 9,
+    "picture": "https://i.ibb.co/R2FBFsg/Youth-Development.png",
+    "title": "Youth Development",
+    "category": "Youth",
+    "category_bg_color": "#3498db",
+    "card_bg_color": "#ecf0f1",
+    "text_button_bg_color": "#2ecc71",
+    "description": "Invest in programs that nurture the potential of young people.",
+    "price": 26.0
+  },
+  {
+    "id": 10,
+    "picture": "https://i.ibb.co/kK5T1Qd/Elderly-Care.jpg",
+    "title": "Elderly Care",
+    "category": "Elderly",
+    "category_bg_color": "#e74c3c",
+    "card_bg_color": "#f5b041",
+    "text_button_bg_color": "#9b59b6",
+    "description": "Support services and care for the elderly to improve their quality of life.",
+    "price": 24.0
+  },
+  {
+    "id": 11,
+    "picture": "https://i.ibb.co/WDyWZ3C/Arts-and-Culture.jpg",
+    "title": "Arts and Culture",
+    "category": "Arts",
+    "category_bg_color": "#16a085",
+    "card_bg_color": "#ecf0f1",
+    "text_button_bg_color": "#1abc9c",
+    "description": "Promote and preserve the arts and cultural heritage in communities.",
+    "price": 19.0
+  },
+  {
+    "id": 12,
+    "picture": "https://i.ibb.co/JCHXDjQ/Mental-Health-Support.jpg",
+    "title": "Mental Health Support",
+    "category": "Health",
+    "category_bg_color": "#27ae60",
+    "card_bg_color": "#ffffff",
+    "text_button_bg_color": "#2980b9",
+    "description": "Provide resources and assistance for individuals struggling with mental health issues.",
+    "price": 27.0
+  }
+]

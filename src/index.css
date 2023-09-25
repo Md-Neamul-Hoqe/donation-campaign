@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    font-family: 'Inter', sans-serif;
+}
+
+a.active {
+    font-weight: bold;
+    color: red !important;
+    background: transparent !important;
+    text-decoration: underline 2px;
+    text-underline-offset: 4px;
+}
