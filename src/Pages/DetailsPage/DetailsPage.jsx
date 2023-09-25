@@ -4,7 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const DetailsPage = () => {
-  const [donations, setDonations] = useState();
+  const [donations, setDonations] = useState([]);
   const cards = useLoaderData();
   const { id: currentId } = useParams();
   const [details] = cards.filter((card) => card.id == currentId);
@@ -21,10 +21,36 @@ const DetailsPage = () => {
   const greetings = () =>
     toast("Thank you for your selfless service through your donation.");
 
-  const handleDonationList = (details) => {
-    // console.log("donation", details);
-    setDonations(details);
-    console.log(donations);
+  const handleDonationList = (donation) => {
+    const donationsStored = localStorage.getItem("donations");
+    // console.log(donationsStored);
+
+    /* if exists previous donation list */
+    if (donationsStored) {
+      const preDonations = JSON.parse(donationsStored);
+      const isExists = preDonations.find(
+        (preDonation) => preDonation.id == donation.id
+      );
+
+      /* if this type of donation already exists */
+      if (!isExists) {
+        const donations = [...preDonations, donation];
+
+        /* set to state */
+        setDonations(donations);
+
+        /* set to local storage / database */
+        return localStorage.setItem("donations", JSON.stringify(donations));
+      } else {
+        return toast("Thanks To Donate Again.");
+      }
+    }
+
+    /* If doesn't exist any list */
+    setDonations([donation]);
+
+    /* set to local storage / database */
+    localStorage.setItem("donations", JSON.stringify(donations));
   };
 
   return (
@@ -35,8 +61,10 @@ const DetailsPage = () => {
           <div className="card-actions bg-black/20 py-5 px-10 w-full absolute left-0 bottom-0">
             <button
               onClick={() => {
-                handleDonationList(details);
-                greetings();
+                {
+                  handleDonationList(details);
+                  greetings();
+                }
               }}
               className={`btn border-0 capitalize font-semibold text-xl rounded drawer-overlay bg-[${text_button_bg_color}] text-white`}>
               Donate ${price}
