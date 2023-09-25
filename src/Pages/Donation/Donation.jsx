@@ -1,14 +1,14 @@
-import { useLoaderData, useParams } from "react-router-dom";
-import DonationCards from "../../components/DonationCards/DonationCards";
+import DonationCard from "../../components/DonationCard/DonationCard";
 
 const Donation = () => {
-  const cards = useLoaderData();
-  const parameters = useParams();
-  console.log(parameters);
-  console.log(cards);
+  const donations = JSON.parse(localStorage.getItem("donations"));
+
+  console.log(donations);
   return (
-    <div className="py-40">
-      <DonationCards></DonationCards>
+    <div className="py-40 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-screen-xl mx-auto">
+      {donations?.map((donation) => (
+        <DonationCard key={donation.id} donation={donation}></DonationCard>
+      ))}
     </div>
   );
 };
