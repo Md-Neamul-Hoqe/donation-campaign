@@ -2,14 +2,14 @@
 export default {
   content: [
     "./index.html",
-    "./components/**/*.{html,js}",
-    "./pages/**/*.{html,js}",
+    "./src/**/*.{js,ts,jsx,tsx}",
     "./**/*.{html,js}",
-    "node_modules/daisyui/dist/**/*.js",
-    "node_modules/react-daisyui/dist/**/*.js",
+    "./src/components/**/*.{html,js}",
+    "./src/pages/**/*.{html,js}",
   ],
   theme: {
     extend: {},
   },
-  plugins: [require("daisyui")],
+
+  plugins: [require("tailwindcss"), require("daisyui")],
 };

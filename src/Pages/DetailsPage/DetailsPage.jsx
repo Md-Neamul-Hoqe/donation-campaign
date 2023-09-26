@@ -87,6 +87,9 @@ const DetailsPage = () => {
                   LSDonations?.length >= 0 && greetings();
                 }
               }}
+              style={{
+                backgroundColor: `${text_button_bg_color}`,
+              }}
               className={`btn btn-md max-sm:btn-xs max-sm:text-xs border-0 capitalize font-semibold text-xl rounded drawer-overlay bg-[${text_button_bg_color}] text-white`}>
               Donate ${price}
             </button>

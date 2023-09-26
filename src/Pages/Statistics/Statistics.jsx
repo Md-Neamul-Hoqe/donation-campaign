@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { PieChart, Pie, Cell } from "recharts";
+import { PieChart, Pie, Cell, Tooltip } from "recharts";
 
 const Statistics = () => {
   const [totalDonations, setTotalDonations] = useState(0);
@@ -12,7 +12,7 @@ const Statistics = () => {
 
   /* load the total donations */
   useEffect(() => {
-    fetch("/donation.json")
+    fetch("/donationJSON.json")
       .then((res) => res.json())
       .then((data) => setTotalDonations(data?.length));
   }, []);
@@ -104,6 +104,7 @@ const Statistics = () => {
               />
             ))}
           </Pie>
+          <Tooltip></Tooltip>
         </PieChart>
       </div>
 

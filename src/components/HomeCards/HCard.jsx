@@ -15,20 +15,25 @@ const HCard = ({ cardData }) => {
   return (
     <Link
       to={`/details/${id}`}
-      className={`card bg-[${card_bg_color}] rounded-lg`}>
+      style={{ backgroundColor: `${card_bg_color}` }}
+      className="rounded-lg">
       <figure className="p-0">
         <img
           src={picture}
           alt={category}
-          className="rounded-none w-full max-h-[calc(100vh/4)]"
+          className="rounded-t-lg w-full max-h-[calc(100vh/4)]"
         />
       </figure>
       <div className="card-body items-start p-5 text-center">
         <h2
-          className={`card-title bg-[${category_bg_color}]/20 text-[${text_button_bg_color}] px-3 font-medium text-sm rounded`}>
+          style={{
+            backgroundColor: `${category_bg_color}`,
+            color: `${text_button_bg_color}`,
+          }}
+          className="px-2 rounded">
           {category}
         </h2>
-        <p className={`text-[${text_button_bg_color}]`}>{title}</p>
+        <p style={{ color: `${text_button_bg_color}` }}>{title}</p>
       </div>
     </Link>
   );
