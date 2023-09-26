@@ -13,8 +13,6 @@ const DetailsPage = () => {
   /* get the id from the parameter passes by the url */
   const { id: currentId } = useParams();
 
-  console.log(currentId);
-
   /* find the donation details from the list of donation */
   const [details] = listOfAllDonations.filter(
     (eachDonation) => eachDonation.id == currentId
@@ -80,7 +78,7 @@ const DetailsPage = () => {
                   handleDonationList(details);
 
                   /* to prevent greeting without adding the donation to the LS */
-                  LSDonations?.length && greetings();
+                  LSDonations?.length >= 0 && greetings();
                 }
               }}
               className={`btn btn-md max-sm:btn-xs max-sm:text-xs border-0 capitalize font-semibold text-xl rounded drawer-overlay bg-[${text_button_bg_color}] text-white`}>

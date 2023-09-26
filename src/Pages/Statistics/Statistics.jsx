@@ -1,25 +1,29 @@
 import { useEffect, useState } from "react";
-import { PieChart, Pie, Cell, Tooltip } from "recharts";
+import { PieChart, Pie, Cell } from "recharts";
 
 const Statistics = () => {
-  /* load the total donations */
   const [totalDonations, setTotalDonations] = useState(0);
+
+  /* Pie chart params */
   const [parameters, setParameters] = useState({});
+
+  /* window current size */
   const [theWindowsWidthState, setTheWindowsWidthState] = useState(0);
 
+  /* load the total donations */
   useEffect(() => {
     fetch("/donation.json")
       .then((res) => res.json())
       .then((data) => setTotalDonations(data?.length));
   }, []);
 
+  /* update size after resize */
   window.addEventListener("resize", () => {
     setTheWindowsWidthState(screen.width);
   });
 
-  const LSDonationsString = localStorage.getItem("donations") || [];
-
   /* Get Your Donations */
+  const LSDonationsString = localStorage.getItem("donations") || "[]";
   const myDonation = JSON.parse(LSDonationsString).length;
 
   /* Set the Getting values */
@@ -32,7 +36,6 @@ const Statistics = () => {
   const COLORS = ["#00C49F", "#FF444A"];
 
   const RADIAN = Math.PI / 180;
-  // let theWindowsWidth = screen.width;
 
   /* to responsive the pie chart with page */
   useEffect(() => {
@@ -101,7 +104,6 @@ const Statistics = () => {
               />
             ))}
           </Pie>
-          {/* <Tooltip></Tooltip> */}
         </PieChart>
       </div>
 
