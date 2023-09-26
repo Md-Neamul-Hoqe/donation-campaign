@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const DonationCard = ({ donation }) => {
+  /* a donation object destruction */
   const {
     id,
     picture,
@@ -12,8 +13,10 @@ const DonationCard = ({ donation }) => {
     category_bg_color,
     text_button_bg_color,
   } = donation;
-  console.log(donation);
+
   return (
+    /* tailwindcss dynamic classes not work and so used dynamic styles */
+
     <div
       style={{
         backgroundColor: `${card_bg_color}`,

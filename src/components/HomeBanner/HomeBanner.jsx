@@ -1,6 +1,7 @@
+import PropTypes from "prop-types";
 import homeBanner from "../../assets/images/home-banner.jpeg";
 
-const HomeBanner = () => {
+const HomeBanner = ({ handleSearchBtn }) => {
   return (
     <div
       className="hero min-h-screen 2xl:min-h-[calc(100vh/2)] text-black -z-10"
@@ -18,10 +19,13 @@ const HomeBanner = () => {
           {/* Search Section */}
           <div className="join">
             <input
+              id="searchCategory"
               className="input input-bordered join-item max-sm:max-w-[200px]"
               placeholder="Search"
             />
-            <button className="btn bg-red-500 hover:bg-red-500 text-white capitalize join-item">
+            <button
+              onClick={() => handleSearchBtn()}
+              className="btn bg-red-500 hover:bg-red-500 text-white capitalize join-item">
               Search
             </button>
           </div>
@@ -29,6 +33,10 @@ const HomeBanner = () => {
       </div>
     </div>
   );
+};
+
+HomeBanner.propTypes = {
+  handleSearchBtn: PropTypes.func.isRequired,
 };
 
 export default HomeBanner;
