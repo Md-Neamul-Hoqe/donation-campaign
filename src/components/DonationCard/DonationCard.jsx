@@ -21,7 +21,7 @@ const DonationCard = ({ donation }) => {
       style={{
         backgroundColor: `${card_bg_color}`,
       }}
-      className={`card max-lg:h-40 rounded-lg flex-row p-0 items-center`}>
+      className="card max-lg:h-40 rounded-lg flex-row p-0 items-center">
       <figure className="p-0 w-60 h-full">
         <img className="h-full m-0 p-0" src={picture} alt={title} />
       </figure>
@@ -31,7 +31,7 @@ const DonationCard = ({ donation }) => {
             backgroundColor: `${category_bg_color}`,
             color: `${text_button_bg_color}`,
           }}
-          className={`card-title text-sm whitespace-nowrap badge-lg rounded`}>
+          className="card-title text-sm whitespace-nowrap badge-lg rounded">
           {category}
         </h2>
         <h2 className="card-title text-sm whitespace-nowrap">{title}</h2>

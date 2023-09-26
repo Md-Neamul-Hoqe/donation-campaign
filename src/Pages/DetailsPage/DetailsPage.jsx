@@ -90,7 +90,7 @@ const DetailsPage = () => {
               style={{
                 backgroundColor: `${text_button_bg_color}`,
               }}
-              className={`btn btn-md max-sm:btn-xs max-sm:text-xs border-0 capitalize font-semibold text-xl rounded drawer-overlay bg-[${text_button_bg_color}] text-white`}>
+              className="btn btn-md max-sm:btn-xs max-sm:text-xs border-0 capitalize font-semibold text-xl rounded drawer-overlay text-white">
               Donate ${price}
             </button>
           </div>
@@ -100,8 +100,7 @@ const DetailsPage = () => {
           <p>{description}</p>
         </div>
       </div>
-      <ToastContainer
-        className={`max-md:max-w-[300px] max-md:ms-auto space-y-3 max-md:py-10`}></ToastContainer>
+      <ToastContainer className="max-md:max-w-[300px] max-md:ms-auto space-y-3 max-md:py-10"></ToastContainer>
     </section>
   );
 };
