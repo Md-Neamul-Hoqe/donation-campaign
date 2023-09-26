@@ -26,7 +26,7 @@ const DetailsPage = () => {
     text_button_bg_color,
     price,
     description,
-  } = details;
+  } = details || {};
 
   const greetings = () =>
     toast("Thank you for your selfless service through your donation.");
@@ -58,7 +58,7 @@ const DetailsPage = () => {
         return toast("Thanks To Donate Again.");
       }
     }
-
+    console.log(picture);
     /* If doesn't exist any list */
     setLSDonations([donation]);
 
@@ -68,6 +68,12 @@ const DetailsPage = () => {
 
   return (
     <section className="py-32 md:py-40">
+      <h1
+        className={`text-4xl font-extrabold justify-center items-center min-h-[calc(100vh-200px)] ${
+          title ? "hidden" : "flex"
+        }`}>
+        Not Found Such Donation
+      </h1>
       <div className="card max-md:px-5 max-w-screen-xl 2xl:max-w-screen-2xl mx-auto rounded-none">
         <figure className="relative rounded-lg">
           <img className="w-full" src={picture} alt={title} />
