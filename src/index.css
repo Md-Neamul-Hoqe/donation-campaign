@@ -14,3 +14,18 @@ a.active {
     text-decoration: underline 2px;
     text-underline-offset: 4px;
 }
+
+.recharts-wrapper {
+    width: 100vw !important;
+    height: 100vh !important;
+    margin: auto;
+}
+
+.recharts-wrapper svg {
+    width: 100vw;
+}
+
+#pieChartId {
+    width: 100vw;
+    height: 100vh;
+}
