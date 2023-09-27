@@ -6,7 +6,7 @@ import { useState } from "react";
 const Home = () => {
   /* load primary data */
   const cardsData = useLoaderData();
-
+  console.log(cardsData.map((donation) => console.log(donation.title)));
   /* searched result state */
   const [searchedCategory, setSearchedCategory] = useState(cardsData);
 
